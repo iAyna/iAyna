@@ -20,15 +20,15 @@
 	<!-- Icons -->
 
 <icon src="images/icon.png" />
-<icon src="images/icons/ios/icon.png" width="57" height="57" />
-<icon src="images/icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
-<icon src="images/icons/ios/icon_at_2x.png" width="114" height="114" />
+<icon src="images/icons/android/ldpi.png" width="57" height="57" />
+<icon src="images/icons/android/mdpi.png" gap:platform="ios" width="72" height="72" />
+<icon src="images/icons/android/hdpi.png" width="114" height="114" />
 <icon src="images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
 <icon src="images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 <icon src="images/icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-<icon src="images/icons/bb/icon.png" gap:platform="blackberry" />
-<icon src="images/icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
-<icon src="images/icons/winphone/icon.png" gap:platform="winphone" />
+<icon src="images/icons/android/mdpi.png" gap:platform="blackberry" />
+<icon src="images/icons/android/mdpi.png" gap:platform="blackberry" gap:state="hover"/>
+<icon src="images/icons/android/mdpi.png" gap:platform="winphone" />
 <!-- winphone requires a jpg for the tile icons -->
 <icon src="images/icons/winphone/tileicon.jpg" gap:platform="winphone" gap:role="background" />
 <icon src="images/icons/webos/icon.png" gap:platform="webos" />
@@ -37,13 +37,13 @@
 <!-- Splash Screens -->
 <gap:splash src="images/splash.png" />
 <gap:splash src="images/splash/ios/Default-Landscape.png" width="1024" height="768" />
-<gap:splash src="images/splash/ios/Default-Portrait.png" width="768" height="1024" />
-<gap:splash src="images/splash/ios/Default.png" width="320" height="480" />
-<gap:splash src="images/splash/ios/Default_at_2x.png" width="640" height="960" />
+<gap:splash src="images/splash/android/hdpi.png" width="768" height="1024" />
+<gap:splash src="images/splash/android/ldpi.png" width="320" height="480" />
+<gap:splash src="images/splash/android/mdpi.png" width="640" height="960" />
 <gap:splash src="images/splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
 <gap:splash src="images/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 <gap:splash src="images/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
-<gap:splash src="images/splash/bb/splash.png" gap:platform="blackberry" />
+<gap:splash src="images/splash/android/mdpi.png" gap:platform="blackberry" />
 <gap:splash src="images/splash/winphone/splash.jpg" gap:platform="winphone" />
 
 <preference name="orientation" value="portrait" />

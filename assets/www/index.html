@@ -19,19 +19,26 @@
 <script src="js/jquery.flexslider.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript">
-	
+
+
+
 function onDeviceReady(){
 $(document).ready(function(){
 	initDatabase();
 	checkCategories();
 });
 }
-/*
-$(document).ready(function(){
-	initDatabase();
-	checkCategories();
-});*/
-document.addEventListener("deviceready",onDeviceReady);
+
+
+if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+  document.addEventListener("deviceready", onDeviceReady, false);
+} else {
+  onDeviceReady(); //this is the browser
+}
+
+
+
+
 </script>
 
 <meta charset="UTF-8">

@@ -1,3 +1,5 @@
+
+
 var $ = jQuery.noConflict();
 var myslider = null; 
 var checkcustomer = false;
@@ -40,13 +42,6 @@ $(window).load(function() {
       }
 	});
 });
-
-$(document).ready(function(){
-    $("a[rel^='prettyPhoto']").prettyPhoto({
-		allow_resize: true, /* Resize the photos bigger than viewport. true/false */
-		default_width: "70%"	
-	});
-  });
 function seeView(target)
 {
 	if(myslider)

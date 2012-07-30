@@ -16,7 +16,7 @@
     <author href="http://www.iayna.com" >
         iAyna 
     </author>
-
+<preference name="orientation" value="portrait" />
 	<!-- Icons -->
 
 <icon src="images/icon.png" />
@@ -48,5 +48,5 @@
 <gap:splash src="images/splash/android/mdpi.png" gap:platform="blackberry" />
 <gap:splash src="images/splash/winphone/splash.jpg" gap:platform="winphone" />
 
-<preference name="orientation" value="portrait" />
+
 </widget>

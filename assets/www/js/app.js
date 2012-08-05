@@ -5,6 +5,10 @@ var myslider = null;
 var checkcustomer = false;
 var catId = "";
 var searchW ="";
+if (navigator.userAgent.match(/(BlackBerry)/)) {
+$(document).ready(function() { document.body.style.height = screen.height + 'px';});
+}
+
 $(window).load(function() {
 	  
 	//Change Language Button

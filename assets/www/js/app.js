@@ -587,7 +587,8 @@ function loadCustomer()
 function insertCustomerPage(data)
 {
 	iAynaDB.transaction(  
-        function (transaction) { 
+        function (transaction) {
+			 
 		//alert(data.content); //"update customers set content = ? ,contentar = ? , lastdate = ?  where id = ?"
 		transaction.executeSql("INSERT OR REPLACE INTO customers (id ,name,namear,cid, content,contentar,lastdate) values (?,?,?,?,?,?,?)", [data.id ,data.name,data.namear,data.cid, data.content,data.contentar,data.lastupdate] ,function (t,r) {loadCustomer(data.id);
 		/***********/

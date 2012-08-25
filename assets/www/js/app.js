@@ -45,6 +45,17 @@ $(window).load(function() {
 		}
       }
 	});
+	
+	var langTmp = getParameterByName("lang");
+	if(langTmp == "ar")
+	{
+		myslider.flexAnimate(myslider.getTarget('next'), true);	
+	}
+	else if(langTmp == "en")
+	{
+		myslider.flexAnimate(myslider.getTarget('prev'), true);	
+	}
+	
 });
 function seeView(target)
 {
@@ -69,6 +80,7 @@ function seeEng()
 		}
 	}
 }
+
 
 function seeArc()
 {
@@ -292,7 +304,10 @@ function loadCategories()
 						
 						if(row['pid'] == "0")
 						{
-							$("#catBackButton").attr("href","../index.html" );
+							if(isarabic)							
+								$("#catBackButton").attr("href","../index.html?lang=ar" );
+							else
+								$("#catBackButton").attr("href","../index.html?lang=en" );
 						}
 						else
 						{

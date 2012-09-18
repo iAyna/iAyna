@@ -17,6 +17,9 @@
         iAyna 
     </author>
 <preference name="orientation" value="portrait" />
+<feature name="http://api.phonegap.com/1.0/device" />
+
+    <preference name="phonegap-version" value="2.0.0" />
 	<!-- Icons -->
 
 <icon src="images/icon.png" />

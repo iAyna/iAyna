@@ -167,7 +167,7 @@ function initDatabase() {
             var shortName = 'iayna';  
             var version = '1.0';  
             var displayName = 'iAyna';  
-            var maxSize = 204800000; //  bytes  
+            var maxSize = 204800000 ; //  bytes  
             iAynaDB = openDatabase(shortName, version, displayName, maxSize); 			
 			createTables();  
         }  

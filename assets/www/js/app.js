@@ -167,7 +167,7 @@ function initDatabase() {
             var shortName = 'iayna';  
             var version = '1.0';  
             var displayName = 'iAyna';  
-            var maxSize = 2048000; //  bytes  
+            var maxSize = 20480000; //  bytes  
             iAynaDB = openDatabase(shortName, version, displayName, maxSize); 			
 			createTables();  
         }  
@@ -213,7 +213,7 @@ function checkCategories()
 					{  
 						var row= results.rows.item(0);						
 						loadHomeCats();						
-						getCategories(row['value']);
+						getCategories('0');
 					}
 					else
 					{						
@@ -229,21 +229,24 @@ function checkCategories()
 
 function getCategories(lastupdate)
 {
+
 	$.getJSON("http://www.iayna.com/api/getcategories/" + encodeURIComponent( lastupdate) , insertCategories );
 }
 
 function insertCategories(data)
 {
+
 	if(iAynaDB != null)
 		iAynaDB.transaction(  
 			function (transaction) { 
 				if(data.categories)
 				{ 
+					transaction.executeSql("DELETE FROM categories");
 					$.each(data.categories, function(key, val) {
 						if(val.is_active == "1")
 							transaction.executeSql("INSERT OR REPLACE INTO categories(id, name, namear, isparent, pid,image,lastdate) VALUES (?, ?, ?, ?, ?, ?,?)", [val.id, val.name, val.namear, val.isparent, val.pid,val.img,val.lastupdate]);  			
-						else
-							transaction.executeSql("DELETE FROM categories WHERE id  = ? ", [val.id]);  			
+						/*else
+							transaction.executeSql("DELETE FROM categories WHERE id  = ? ", [val.id]); */ 			
 						
 					}); 
 					
